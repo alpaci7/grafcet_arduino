@@ -12,7 +12,7 @@ app.get('/',(req, res)=>{
 app.post('/control-led', async (req, res) => {
   try {
     const action = req.body.action; // 'on' or 'off'
-    const esp32Url = `http://192.168.11.102/led/${action}`; // Replace with your ESP32's IP
+    const esp32Url = `http://192.168.11.102/led/${action}`; 
 
     // Send request to ESP32 to toggle LED
     const response = await axios.get(esp32Url);
