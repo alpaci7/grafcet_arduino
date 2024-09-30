@@ -24,7 +24,7 @@ app.get('/', (req, res)=>{
 });
 
 app.post('/upload', (req, res) => {
-  const sketchDir = path.join(__dirname, 'sketches');
+  const sketchDir = path.join(__dirname, 'tmp');
 
   // Create a directory for the sketch if it doesn't exist
   if (!fs.existsSync(sketchDir)) {
