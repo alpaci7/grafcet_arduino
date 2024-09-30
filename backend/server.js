@@ -36,7 +36,7 @@ app.post('/upload', (req, res) => {
   // Write the Arduino code to a .ino file
   fs.writeFile(inoFilePath, arduinoCode, (err) => {
     if (err) {
-      return res.status(500).send('Error writing Arduino code to file');
+      return res.status(500).json({message : 'Error writing Arduino code to file'});
     }
 
     // Path to the Arduino IDE (adjust based on your OS)
@@ -51,7 +51,7 @@ app.post('/upload', (req, res) => {
     exec(command, (compileErr, stdout, stderr) => {
       if (compileErr) {
         console.error('Compile/Upload error:', stderr);
-        return res.status(500).send('Compilation or Upload failed');
+        return res.status(500).json({'Compilation or Upload failed'});
       }
 
       console.log('Compilation/Upload output:', stdout);
