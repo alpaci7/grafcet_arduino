@@ -6,7 +6,7 @@ app.use(express.json());
 
 
 app.get('/',(req, res)=>{
-  res.status(200).json({message : "hello"});
+  res.status(200).json({message : "hello ESP"});
 });
 // Route to control the ESP32 LED
 app.post('/control-led', async (req, res) => {
