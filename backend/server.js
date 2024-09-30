@@ -5,6 +5,7 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.json());
 // Define the Arduino code as a string
 const arduinoCode = `
 #define BUILTIN_LED 13
