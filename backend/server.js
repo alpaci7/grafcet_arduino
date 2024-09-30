@@ -51,7 +51,7 @@ app.post('/upload', (req, res) => {
     exec(command, (compileErr, stdout, stderr) => {
       if (compileErr) {
         console.error('Compile/Upload error:', stderr);
-        return res.status(500).json({'Compilation or Upload failed'});
+        return res.status(500).json({message : 'Compilation or Upload failed'});
       }
 
       console.log('Compilation/Upload output:', stdout);
