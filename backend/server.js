@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
   digitalWrite(BUILTIN_LED, !digitalRead(BUILTIN_LED));
-  delay(1000);
+  delay(100);
 }
 `;
 
